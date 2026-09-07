@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Mercadinho Vendi Mais</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <h1>Mercadinho Vendi Mais</h1> 
+            <img src="./assets/imagem carrinho.jpeg" alt="Carrinho de compras">
+        </nav>
+        
+    <div>
+    <form action="" id="formulario">
+        <label for="produto">Produto:</label>
+        <input type="text" id="produto" name="product" required placeholder="Ex: Arroz 5kg"">
+    
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="qtd" name="quantidade" required placeholder="Ex: 2">
+        
+        <label for="preco">Preço:</label>
+        <input type="text" id="preco" name="preco" inputmode="decimal" required placeholder="Ex: 26,50">
+
+        <button type="submit">Adicionar</button>        
+    </form>
+    </div>
+
+        <div id="listaProdutos"></div>
+        <button type="button" onclick="calcularTotal()">Mostrar Total</button>
+        <p id="total"></p>
+
+    </div>
+    
+    <script src="script.js"></script>
+    
+    
+</body>
+</html>
