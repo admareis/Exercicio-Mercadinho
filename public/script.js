@@ -31,7 +31,7 @@ async function carregarProdutos() {
             item.innerHTML = `
             ${produto.produto} - ${produto.quantidade} x ${produto.preco} = ${ (produto.quantidade * produto.preco).toFixed(2) }
             <button onclick="excluirProduto(${produto.id})">
-                Excluir
+            <img src="./assets/circulo-xmark.svg" class="imgform" alt=""> Excluir
             </button>
         `;                                  
         listaProdutos.appendChild(item);
@@ -47,7 +47,7 @@ async function calcularTotal() {
         return soma + produto.quantidade * produto.preco;
     }, 0); // o 0 é o valor inicial da soma //
 
-    document.getElementById("total").textContent = `Total: R$ ${total.toFixed(2)}`;
+   document.getElementById("total").innerHTML = `<img src="./assets/cesta-de-compras.svg" class="imgform" alt=""> Total: R$ ${total.toFixed(2)}`;
 }
 
 carregarProdutos(); // carrega a lista de produtos cadastrados ao carregar a página //

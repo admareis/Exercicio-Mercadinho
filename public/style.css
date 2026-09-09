@@ -15,21 +15,53 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 90%;
     height: 90%;
-    border: 1px solid black;
+    border: 3px dotted black;
 }
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 60%;
-    background-color: rgb(196, 187, 175);
+    width: 30%;
+    margin-top: 10px;
+}
+nav h1{
+    font-family: "Libertinus Serif", serif;
+    font-weight: 600;
+    font-style: normal;
 }
 nav>img{
     width: 100px;
     height: 60px;
     border-radius: 10px;
 }   
+.imgform{
+    width: 15px;
+    height: 15px;
+}
+.forms{
+    display: flex;
+    align-items: center;   
+    padding: 10px; 
+}
+#total{
+    margin-top: 10px;
+}
+#listaProdutos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%; 
+}
+button{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
