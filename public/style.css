@@ -36,7 +36,11 @@ nav>img{
     width: 100px;
     height: 60px;
     border-radius: 10px;
-}   
+}  
+.imgnav{
+    width: 30px;
+    height: 30px;
+} 
 .imgform{
     width: 15px;
     height: 15px;
