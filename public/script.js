@@ -12,7 +12,13 @@ form.addEventListener ("submit", async(event) => {
         body: JSON.stringify({produto: produto, quantidade: quantidade, preco: preco }),
     });
 
+if (resposta.status === 404) { // vai navegar para a página 404 ANTES de tentar converter para JSON //
+        window.location.href = "erro404.html";
+        return;
+};
+
 const produtos = await resposta.json();
+
 
 console.log(produtos);
 form.reset(); // limpa os campos do formulário //
@@ -22,9 +28,8 @@ carregarProdutos(); // atualiza a lista de produtos cadastrados //
 async function carregarProdutos() {
     const resposta = await fetch("/mercado");
     const produtos = await resposta.json();
-
     const listaProdutos = document.getElementById("listaProdutos");
-    listaProdutos.innerHTML = ""; // limpa a lista antes de adicionar os produtos //
+    listaProdutos.innerHTML = ""; // limpa a lista antes de adicionar os produtos //    
 
     produtos.forEach((produto) => {
         const item = document.createElement("p");
